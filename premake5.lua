@@ -9,22 +9,22 @@ project "glm"
     targetdir ("%{wks.location}/Binaries/" .. outputdir .. "/%{prj.name}")
     objdir ("%{wks.location}/Intermediate/" .. outputdir .. "/%{prj.name}")
 
-files
-{
-    "glm/**.hpp",
-		"glm/**.inl"
-}
+    files
+    {
+        "glm/**.hpp",
+        "glm/**.inl"
+    }
 
-filter "system:windows"
-    systemversion "latest"
-    staticruntime "on"
-    
-filter "configurations:Debug"
-    defines "NIT_DEBUG"
-    runtime "Debug"
-    symbols "on"
-    
-filter "configurations:Release"
-    defines "NIT_RELEASE"
-    runtime "Release"
-    optimize "on"
+    filter "system:windows"
+        systemversion "latest"
+        staticruntime "on"
+        
+    filter "configurations:Debug"
+        defines "NIT_DEBUG"
+        runtime "Debug"
+        symbols "on"
+        
+    filter "configurations:Release"
+        defines "NIT_RELEASE"
+        runtime "Release"
+        optimize "on"
