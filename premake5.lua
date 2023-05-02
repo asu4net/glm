@@ -17,7 +17,7 @@ project "glm"
 
     filter "system:windows"
         systemversion "latest"
-        staticruntime "on"
+        staticruntime "off"
         
     filter "configurations:Debug"
         defines "NIT_DEBUG"
